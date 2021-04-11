@@ -91,6 +91,55 @@ router.get("/stocks", isAuthorized, async (req, res) => {
   res.render("stocks", { stocks: req.user.stocks });
 });
 
+//New
+router.get("/stocks/new", isAuthorized, (req, res) => {
+  res.render("new");
+});
+
+//Destroy
+router.delete("/stocks/:id", isAuthorized, (req, res) => {
+  User.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/stocks");
+  });
+});
+
+//Update
+router.put("/stocks/:id", isAuthorized, (req, res) => {
+  User.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedModel) => {
+      res.redirect("/stocks/:id");
+    }
+  );
+});
+
+//Create
+router.post("/stocks", isAuthorized, async (req, res) => {
+  const user = await User.findOne({ username: req.user.username });
+  user.stocks.push(req.body);
+  await user.save();
+  res.redirect("/stocks");
+});
+
+//Edit
+router.get("/stocks/:id/edit", isAuthorized, (req, res) => {
+  User.findById(req.params.id, (err, foundStock) => {
+    //find the stock
+    res.render("edit.ejs", {
+      stock: foundStock, //pass in found stock
+    });
+  });
+});
+
+//Show
+router.get("/stocks/:id", isAuthorized, (req, res) => {
+  User.findById("req.params.id", (error) => {
+    res.render("show.ejs");
+  });
+});
+
 ///////////////////////////////
 // Export Router
 ////////////////////////////////

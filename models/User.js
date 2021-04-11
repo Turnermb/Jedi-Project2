@@ -4,7 +4,7 @@ const { Schema, model } = require("../db/connection");
 const Stock = new Schema({
   name: { type: String, required: true },
   ticker: { type: String, required: true },
-  price: { type: Number, required: true },
+  price: { type: String, required: true },
   stockQty: { type: Number, required: true },
 });
 // User Schema

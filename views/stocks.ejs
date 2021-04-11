@@ -6,7 +6,14 @@
     <title>Matador: Stocks</title>
   </head>
   <body>
+    <h1>Current Recorded Positions</h1>
     <a href="/auth/logout"><button class="button">Logout</button></a>
-    Stonks
+    <% for(stock of stocks) { %>
+    <li>
+      <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
+      $<%= stock.ticker %>
+    </li>
+    <% } %>
+    <a href="/stocks/new"><button class="button">Add A New Position</button></a>
   </body>
 </html>
