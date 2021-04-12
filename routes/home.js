@@ -124,9 +124,10 @@ router.post("/stocks", isAuthorized, async (req, res) => {
 });
 
 //Edit
-router.get("/stocks/:id/edit", isAuthorized, (req, res) => {
+router.get("/stocks/:id/edit", isAuthorized, async (req, res) => {
   User.findById(req.params.id, (err, foundStock) => {
     //find the stock
+    console.log(foundStock);
     res.render("edit.ejs", {
       stock: foundStock, //pass in found stock
     });

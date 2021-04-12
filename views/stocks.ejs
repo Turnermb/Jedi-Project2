@@ -11,7 +11,7 @@
     <% for(stock of stocks) { %>
     <li>
       <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
-      $<%= stock.ticker %>
+      $<%= stock.ticker.toUpperCase() %>
     </li>
     <% } %>
     <a href="/stocks/new"><button class="button">Add A New Position</button></a>
