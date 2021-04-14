@@ -2,17 +2,40 @@
 <html lang="en">
   <!-- THE HEAD TAG PARTIAL -->
   <%- include("partials/head") %>
-
   <body>
-    <header>
-      <div id="logo">Matador</div>
-      <div id="authButtons">
-        <a href="/auth/signup"><button class="button">SIGNUP</button></a>
-        <a href="/auth/login"><button class="button">LOGIN</button></a>
+    <!--- HOME PAGE SPECIFIC HEADER TAG PARTIAL-->
+    <%- include('partials/homeheader') %>
+    <main>
+      <div id="homeTextDiv">
+        <h2 id="missionHeader">Our Mission:</h2>
+        <br />
+        <p id="missionParagraph">
+          Named for the greek creature of myth with the head of a bull and the
+          body of a human, the name "Minotaur" represents the point where
+          humankind meets the bull market of today. With spectacular service and
+          cutting edge technology we strive daily to keep you, yes you, from
+          seeing red.
+        </p>
+        <h2 id="whyHeader">Why Choose Minotaur?</h2>
+        <p id="whyParagraph">
+          With such stiff competition in the financial field, you may be
+          wondering: "Why would I choose Minotaur?". To that I would ask if
+          you've seen our overwhelmingly positive reviews? Here are just a few.
+        </p>
+        <div id="reviewDiv">
+          <p id="review1">
+            "Pretty cool, I guess."<br />
+            -Jim Bob Cooter, of the Detroit Lions
+          </p>
+          <p id="review2">
+            "What do you do again?"<br />
+            -Betty White
+          </p>
+          <p id="review3">"..."<br />-The Blue Man Group</p>
+        </div>
       </div>
-    </header>
-    <main>Stonks</main>
-    <!-- THE HEAD TAG PARTIAL -->
+    </main>
+    <!-- THE FOOTER TAG PARTIAL -->
     <%- include("partials/footer") %>
   </body>
 </html>

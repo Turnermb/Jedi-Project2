@@ -106,7 +106,7 @@ router.delete("/stocks/:id", isAuthorized, (req, res) => {
 //Update
 router.put("/stocks/:id", isAuthorized, (req, res) => {
   User.findByIdAndUpdate(
-    req.params.id,
+    req.user.id,
     req.body,
     { new: true },
     (err, updatedModel) => {
@@ -126,18 +126,23 @@ router.post("/stocks", isAuthorized, async (req, res) => {
 //Edit
 router.get("/stocks/:id/edit", isAuthorized, async (req, res) => {
   const id = req.params.id;
-  const stock = await User.findById(id);
-  console.log(stock);
-  res.render("edit", {
-    stock,
+  const index = req.user.stocks.findIndex((stock) => {
+    return `${stock._id}` === id;
   });
+  const stock = (req.user.stocks[index] = req.body);
+  req.user.save();
+  res.render("edit", { stock });
 });
 
 //Show
 router.get("/stocks/:id", isAuthorized, (req, res) => {
-  User.findById("req.params.id", (error) => {
-    res.render("show.ejs");
+  const id = req.params.id;
+  const index = req.user.stocks.findIndex((stock) => {
+    return `${stock._id}` === id;
   });
+  const stock = req.user.stocks[index];
+  //   console.log(id, index, stock._id, stock);
+  res.render("show", { stock });
 });
 
 ///////////////////////////////

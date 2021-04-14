@@ -2,10 +2,10 @@
 <html lang="en">
   <!-- THE HEAD TAG PARTIAL -->
   <%- include("../partials/head") %>
-
   <body>
-    <!-- THE HEADER TAG PARTIAL -->
-    <%- include("../partials/header") %>
+    <header>
+      <a href="/"><h1 id="logo">Minotaur</h1></a>
+    </header>
     <main>
       <h1>User Login</h1>
       <form action="/auth/login" method="post">

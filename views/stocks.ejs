@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matador: Stocks</title>
-  </head>
+  <%- include('partials/head') %>
   <body>
-    <h1>Current Recorded Positions</h1>
-    <a href="/auth/logout"><button class="button">Logout</button></a>
-    <% for(stock of stocks) { %>
-    <li>
-      <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
-      $<%= stock.ticker.toUpperCase() %>
-    </li>
-    <% } %>
-    <a href="/stocks/new"><button class="button">Add A New Position</button></a>
+    <%- include('partials/header') %>
+    <main>
+      <h1>Current Recorded Positions</h1>
+      <% for(stock of stocks) { %>
+      <li>
+        <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
+        $<%= stock.ticker.toUpperCase() %>
+      </li>
+      <% } %>
+      <a href="/stocks/new"
+        ><button class="button">Add A New Position</button></a
+      >
+    </main>
   </body>
 </html>

@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matador: Stocks</title>
-  </head>
+  <%- include('partials/head') %>
   <body>
-    <h1 id="stockName"><%= stock.name %></h1>
-    <div id="stockDetails">
-      <h2>
-        <%= stock.stockQty %> shares of $<%= stock.ticker.toUpperCase() %> at
-        $<%= stock.price %> each.
-      </h2>
-    </div>
-    <div id="buttonDiv">
-      <a href="/stocks/<%=stock._id%>/edit"
-        ><button id="editButton">Edit This Entry</button></a
-      >
-      <form action="/stocks/<%= stock._id %>?_method=DELETE" method="post">
-        <input type="submit" value="Delete Entry" />
-      </form>
-    </div>
+    <%- include('partials/header') %>
+    <main>
+      <h1 id="stockName"><%= stock.name %></h1>
+      <div id="stockDetails">
+        <h2>
+          <%= stock.stockQty %> shares of $<%= stock.ticker.toUpperCase() %> at
+          $<%= stock.price %> each.
+        </h2>
+      </div>
+      <div id="buttonDiv">
+        <a href="/stocks/<%=stock._id%>/edit"
+          ><button id="editButton">Edit This Entry</button></a
+        >
+        <form action="/stocks/<%= stock._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete Entry" />
+        </form>
+      </div>
+    </main>
   </body>
 </html>
