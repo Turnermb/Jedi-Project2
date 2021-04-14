@@ -1,5 +1,5 @@
 body {
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -13,6 +13,10 @@ header {
   height: 100px;
 }
 
+h2 {
+  font-size: 35px;
+}
+
 main {
   background: radial-gradient(
     rgba(0, 0, 0, 0.6),
@@ -24,6 +28,7 @@ main {
   );
   text-align: center;
   text-shadow: 1px 1px black;
+  min-height: 100vh;
 }
 
 #authButtons {
@@ -61,8 +66,30 @@ footer {
 
 #homeTextDiv {
   position: relative;
-  top: 50%;
+  top: 150px;
   left: 30%;
   height: 300px;
   width: 500px;
+}
+
+#reviewDiv {
+  position: relative;
+  margin-top: 55px;
+  left: -55px;
+  background: radial-gradient(rgba(94, 88, 88, 0.8), rgba(94, 88, 88, 0.7));
+  flex: wrap;
+  display: inline-flex;
+  border: 2px groove white;
+}
+
+#review1 {
+  width: 200px;
+}
+
+#review2 {
+  width: 200px;
+}
+
+#review3 {
+  width: 200px;
 }

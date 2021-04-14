@@ -129,8 +129,7 @@ router.get("/stocks/:id/edit", isAuthorized, async (req, res) => {
   const index = req.user.stocks.findIndex((stock) => {
     return `${stock._id}` === id;
   });
-  const stock = (req.user.stocks[index] = req.body);
-  req.user.save();
+  const stock = req.user.stocks[index];
   res.render("edit", { stock });
 });
 
@@ -141,7 +140,7 @@ router.get("/stocks/:id", isAuthorized, (req, res) => {
     return `${stock._id}` === id;
   });
   const stock = req.user.stocks[index];
-  //   console.log(id, index, stock._id, stock);
+  console.log(id, index, stock._id, stock);
   res.render("show", { stock });
 });
 
