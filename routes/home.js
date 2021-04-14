@@ -97,22 +97,25 @@ router.get("/stocks/new", isAuthorized, (req, res) => {
 });
 
 //Destroy
-router.delete("/stocks/:id", isAuthorized, (req, res) => {
-  User.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/stocks");
-  });
+router.delete("/stocks/:id", isAuthorized, async (req, res) => {
+  const id = req.params.id;
+  const index = req.user.stocks.findIndex((stock) => `${stock._id}` === id);
+  req.user.stocks.splice(index, 1);
+  req.user.save();
+  res.redirect(`/stocks`);
 });
 
 //Update
-router.put("/stocks/:id", isAuthorized, (req, res) => {
-  User.findByIdAndUpdate(
-    req.user.id,
-    req.body,
-    { new: true },
-    (err, updatedModel) => {
-      res.redirect("/stocks/:id");
-    }
-  );
+router.put("/stocks/:id", isAuthorized, async (req, res) => {
+  const id = req.params.id;
+  const index = req.user.stocks.findIndex((stock) => `${stock._id}` === id);
+  req.user.stocks[index].name = req.body.name;
+  req.user.stocks[index].ticker = req.body.ticker;
+  req.user.stocks[index].price = req.body.price;
+  req.user.stocks[index].stockQty = req.body.stockQty;
+  //   console.log(req.user.stocks, id);
+  req.user.save();
+  res.redirect(`/stocks/${id}`);
 });
 
 //Create
@@ -140,7 +143,7 @@ router.get("/stocks/:id", isAuthorized, (req, res) => {
     return `${stock._id}` === id;
   });
   const stock = req.user.stocks[index];
-  console.log(id, index, stock._id, stock);
+  //   console.log(id, index, stock._id, stock);
   res.render("show", { stock });
 });
 
