@@ -5,33 +5,61 @@
   <body>
     <!--- HOME PAGE SPECIFIC HEADER TAG PARTIAL-->
     <%- include('partials/homeheader') %>
+    <img
+      id="moneyImage"
+      src="https://bitcoinist.com/wp-content/uploads/2020/05/shutterstock_393692620.jpg"
+    />
     <main>
+        <div id='whyImgDiv'>
+            <img id='whyImg' src='http://image.freepik.com/free-photo/young-attractive-dark-haired-man-glasses-is-writing-business-plan-whiteboard-he-wears-blue-shirt-dark-jacket_197531-545.jpg'>
+            <p id='whyImgText'>Let our team work for you.</p>
+        </div>
+      <div id="whyBackground"></div>
       <div id="homeTextDiv">
-        <h2 id="missionHeader">Our Mission:</h2>
-        <br />
-        <p id="missionParagraph">
-          Named for the greek creature of myth with the head of a bull and the
-          body of a human, the name "Minotaur" represents the point where
-          humankind meets the bull market of today. With spectacular service and
-          cutting edge technology we strive daily to keep you, yes you, from
-          seeing red.
-        </p>
-        <h2 id="whyHeader">Why Choose Minotaur?</h2>
-        <p id="whyParagraph">
-          With such stiff competition in the financial field, you may be
-          wondering: "Why would I choose Minotaur?". To that I would ask if
-          you've seen our overwhelmingly positive reviews? Here are just a few.
-        </p>
-        <div id="reviewDiv">
-          <p id="review1">
-            "Pretty cool, I guess."<br />
-            -Jim Bob Cooter, of the New York Jets
+        <div id="missionDiv">
+          <h2 id="missionHeader">Our Mission:</h2>
+          <br />
+          <p id="missionParagraph">
+            Named for the greek creature of myth with the head of a bull and the
+            body of a human, the name "Minotaur" represents the point where
+            humankind meets the bull market of today. With spectacular service
+            and cutting edge technology we strive daily to keep green in your
+            pocket and to keep you, yes you, from seeing red.
           </p>
-          <p id="review2">
-            "What do you do again?"<br />
-            -Betty White
+        </div>
+        <div id="whyMinotaur">
+          <h2 id="whyHeader">Why Choose Minotaur?</h2><br/>
+          <p id="whyParagraph">
+            With such stiff competition in the financial field, you may be
+            wondering: "Why would I choose Minotaur?". To that I would ask if
+            you've seen our overwhelmingly positive reviews? Here are just a
+            few.
           </p>
-          <p id="review3">"..."<br />-The Blue Man Group</p>
+          <div id="reviewDiv">
+            <div id="reviewContainer1">
+              <div id="reviewColorDiv"></div>
+              <p id="reviewText1">
+                "The greatest."<br />
+                -Muhammad Ali
+              </p>
+            </div>
+            <div id="reviewContainer2">
+              <div id="reviewColorDiv"></div>
+              <p id="reviewText2">
+                "6 out of 5 stars."<br />
+                -Betty White
+              </p>
+            </div>
+            <div id="reviewContainer3">
+              <div id="reviewColorDiv"></div>
+              <p id="reviewText3">"..."<br />-The Blue Man Group</p>
+            </div>
+          </div>
+          <br />
+        
+            <a href="/auth/signup">Sign up</a> today to begin your journey with
+            the Minotaur family.
+          </p>
         </div>
       </div>
     </main>
