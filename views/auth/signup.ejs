@@ -7,12 +7,36 @@
       <a href="/"><h1 id="logo">Minotaur</h1></a>
     </header>
     <main>
-      <h1>User Signup</h1>
-      <form action="/auth/signup" method="post">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <input type="submit" value="sign up" />
-      </form>
+      <div id="signUpSideDiv">
+        <div id="sideFilter"></div>
+        <aside id="signUpSideText">
+          <p id="signUpSidePTop">Make it rain with Minotaur.</p>
+          <br />
+          <p id="signUpSidePMid">Quit your job.</p>
+          <br />
+          <p id="signUpSidePBottom">Do cool stuff.</p>
+        </aside>
+      </div>
+      <div id="signUpDiv">
+        <div id="signUpContent">
+          <div id="signUpColor"></div>
+          <br />
+          <h1 id="signUpTitle">User Signup</h1>
+          <br />
+          <form id="signUpForm" action="/auth/login" method="post">
+            <input type="text" placeholder="username" name="username" />
+            <input type="password" placeholder="password" name="password" />
+            <input type="submit" value="Sign Up" />
+          </form>
+          <br />
+          <a href="/"><button id="homeButton">Back To Home</button></a>
+        </div>
+      </div>
+      <p id="signUpBottomText">
+        *We at Minotaur do not actually recommend leaving your current place of
+        employment without a solid financial strategy in place. Doing so may
+        cause irreperable harm to your personal and professional relationships.
+      </p>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>

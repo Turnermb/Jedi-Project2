@@ -184,7 +184,7 @@ footer {
   border-bottom: 1px solid black;
   background: rgb(2, 0, 36);
   background: linear-gradient(
-    90deg,
+    180deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(160, 255, 53, 1) 60%,
     rgba(4, 209, 0, 1) 100%
@@ -198,4 +198,144 @@ footer {
   width: 65%;
   z-index: 0;
   position: absolute;
+}
+
+#logInDiv {
+  background: gainsboro;
+  height: 200px;
+  width: 550px;
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+#logInContent {
+  height: 199px;
+  position: absolute;
+}
+
+#logInForm {
+  position: relative;
+}
+
+#logInLink {
+  position: relative;
+}
+
+#logInColor {
+  z-index: 1;
+  height: 25px;
+  width: 548px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(160, 255, 53, 1) 60%,
+    rgba(4, 209, 0, 1) 100%
+  );
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: 1px solid black;
+}
+
+#signUpDiv {
+  background: gainsboro;
+  height: 200px;
+  width: 550px;
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+#signUpContent {
+  height: 199px;
+  position: absolute;
+}
+
+#signUpForm {
+  position: relative;
+  left: 1%;
+}
+
+#signUpColor {
+  z-index: 1;
+  height: 25px;
+  width: 548px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(160, 255, 53, 1) 60%,
+    rgba(4, 209, 0, 1) 100%
+  );
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: 1px solid black;
+}
+
+#signUpSideDiv {
+  color: white;
+  text-shadow: 1px 1px black;
+  background-image: url("https://altiqe.com/wp-content/uploads/2019/05/Worker-rain-1200x900.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  height: 600px;
+  width: 375px;
+  border-right: 2px solid rgba(160, 255, 53, 1);
+  border-left: 2px solid rgba(160, 255, 53, 1);
+  border-radius: 15px;
+}
+
+#sideFilter {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 600px;
+  width: 375px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#signUpSidePTop {
+  background: rgba(0, 0, 0, 0);
+  font-family: cinzel;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+#signUpSidePMid {
+  font-family: cinzel;
+  font-size: 21px;
+  font-weight: bold;
+  position: absolute;
+  color: whitesmoke;
+  top: 27%;
+}
+
+#signUpSidePBottom {
+  font-family: cinzel;
+  font-size: 21px;
+  font-weight: bold;
+  position: absolute;
+  color: whitesmoke;
+  top: 45%;
+  right: 0%;
+}
+
+#signUpBottomText {
+  font-size: 14px;
+  width: 500px;
+  position: absolute;
+  bottom: 10%;
+  left: 38.5%;
+  color: white;
 }

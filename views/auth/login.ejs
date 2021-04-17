@@ -7,14 +7,24 @@
       <a href="/"><h1 id="logo">Minotaur</h1></a>
     </header>
     <main>
-      <h1>User Login</h1>
-      <form action="/auth/login" method="post">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <input type="submit" value="Log In" />
-      </form>
-      Or <a href="/auth/signup">sign up</a> if you don't have a Matador account
-      already.
+      <div id="logInDiv">
+        <div id="LogInContent">
+          <div id="logInColor"></div>
+          <h1 id="logInTitle">User Login</h1>
+          <br />
+          <form id="logInForm" action="/auth/login" method="post">
+            <input type="text" placeholder="username" name="username" />
+            <input type="password" placeholder="password" name="password" />
+            <input type="submit" value="Log In" />
+          </form>
+          <p id="logInLink">
+            Or <a href="/auth/signup">sign up</a> if you don't have a Matador
+            account already.
+          </p>
+          <br />
+          <a href="/"><button>Back To Home</button></a>
+        </div>
+      </div>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>
