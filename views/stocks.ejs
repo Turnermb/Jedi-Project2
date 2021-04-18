@@ -4,13 +4,17 @@
   <body>
     <%- include('partials/header') %>
     <main>
-      <h1>Current Recorded Positions</h1>
-      <% for(stock of stocks) { %>
-      <li>
-        <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
-        $<%= stock.ticker.toUpperCase() %>
-      </li>
-      <% } %>
+      <div id="indexInfo">
+        <h1>Current Recorded Positions</h1>
+        <br />
+        <% for(stock of stocks) { %>
+        <li>
+          <a href="/stocks/<%= stock._id %>"><%= stock.name %></a>
+          $<%= stock.ticker.toUpperCase() %>
+        </li>
+        <% } %>
+      </div>
+      <br />
       <a href="/stocks/new"
         ><button class="button">Add A New Position</button></a
       >

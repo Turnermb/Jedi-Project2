@@ -5,39 +5,42 @@
     <%- include('partials/header') %>
     <main>
       <div id="editDiv">
+        <h1>Edit Entry</h1><br />
         <form action="/stocks/<%= stock._id %>?_method=PUT" method="post">
-          Name:
+          Name:<br />
           <input
             class="editInput"
             type="text"
             name="name"
             value="<%=stock.name%>"
-          /><br />
-          Ticker Symbol:
+          /><br /><br />
+          Ticker Symbol:<br />
           <input
             class="editInput"
             type="text"
             name="ticker"
             value="<%=stock.ticker%>"
-          /><br />
-          Price: $<input
+          /><br /><br />
+          Price:<br /> $<input
             class="editInput"
             type="string"
             name="price"
             value="<%=stock.price%>"
-          /><br />
-          Quantity:
+          /><br /><br />
+          Quantity:<br />
           <input
             class="editInput"
             type="number"
             name="stockQty"
             value="<%=stock.stockQty%>"
-          /><br />
+          /><br /><br />
+          <div id='editButtonDiv'>
           <input id="editSubmitButton" type="submit" value="Save Changes" />
         </form>
         <a id="editCancelButton" href="/stocks/<%=stock._id%>"
           ><button>Cancel</button></a
         >
+        </div>
       </div>
     </main>
     <%- include('partials/footer') %>

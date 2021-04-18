@@ -339,3 +339,71 @@ footer {
   left: 38.5%;
   color: white;
 }
+
+#newDiv {
+  width: 40%;
+  height: 65%;
+  background: gainsboro;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+#newTitle {
+  font-size: 25px;
+}
+
+#indexInfo {
+  color: white;
+  font-size: 24px;
+}
+
+#indexInfo h1 {
+  font-size: 35px;
+}
+
+#indexInfo a {
+  color: white;
+}
+
+#showDiv {
+  color: white;
+  position: absolute;
+  top: 14%;
+  right: 35%;
+}
+
+#stockName {
+  font-size: 40px;
+}
+
+#buttonDiv {
+  position: relative;
+  display: inline-flex;
+}
+
+#editDiv {
+  width: 40%;
+  height: 65%;
+  background: gainsboro;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+#editDiv h1 {
+  font-size: 25px;
+}
+
+#editButtonDiv {
+  position: relative;
+  display: inline-flex;
+}
+
+#editCancelButton {
+  height: 10px;
+}

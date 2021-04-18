@@ -11,12 +11,12 @@ const methodOverride = require("method-override");
 const morgan = require("morgan");
 const cors = require("cors");
 // GET PORT FROM ENV OR DEFAULT PORT
-const PORT = process.env.PORT || "2021";
-const SECRET = process.env.SECRET || "secret"
+const PORT = process.env.PORT || "27017";
+const SECRET = process.env.SECRET || "secret";
 const HomeRouter = require("./routes/home.js");
 // Sessions Middleware
 const session = require("express-session"); // create session cookies
-const connect = require("connect-mongodb-session")(session) // store cookies in mongo
+const connect = require("connect-mongodb-session")(session); // store cookies in mongo
 
 /////////////////////////////////////
 // Create Express Application Object

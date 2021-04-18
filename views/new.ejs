@@ -4,20 +4,27 @@
   <body>
     <%- include('partials/header' ) %>
     <main>
-      <h1>Add A New Position</h1>
-      <form id="newForm" action="/stocks" method="POST">
-        Name: <input type="text" name="name" /><br />
-        Ticker Symbol: <input type="text" name="ticker" /><br />
-        Price: $<input type="string" name="price" /><br />
-        Quantity: <input type="number" name="stockQty" /><br />
-        <input
-          id="submitButton"
-          type="submit"
-          name=""
-          value="Submit Position"
-        />
-      </form>
-      <a href="/stocks"><button>Cancel</button></a>
+      <div id="newDiv">
+        <h1 id="newTitle">Add A New Position</h1>
+        <br />
+        <form id="newForm" action="/stocks" method="POST">
+          Name:<br />
+          <input type="text" name="name" /><br /><br />
+          Ticker Symbol:<br />
+          <input type="text" name="ticker" /><br /><br />
+          Price:<br />
+          $<input type="string" name="price" /><br /><br />
+          Quantity:<br />
+          <input type="number" name="stockQty" /><br /><br />
+          <input
+            id="submitButton"
+            type="submit"
+            name=""
+            value="Submit Position"
+          />
+        </form>
+        <a href="/stocks"><button>Cancel</button></a>
+      </div>
     </main>
     <%- include('partials/footer') %>
   </body>
